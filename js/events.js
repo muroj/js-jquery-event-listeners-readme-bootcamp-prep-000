@@ -7,8 +7,9 @@ function getIt() {
 
 function frameIt() {
   $('img').on("load", function() {
-    console.log("HELLO FROM FRAME IT")
-    alert("HELLO FROM FRAME IT")
+    // Can't seem to get this to work.
+    // frameIt is called from document.ready(), once all of the images 
+    // have already been loaded. So...the load event is not triggered.
     $(this).addClass("tasty")
   });
 }
